@@ -38,6 +38,22 @@
 ### 5. `Accelerating_Automatic_Search-main.zip`
 - 一个密码学自动搜索算法的开源项目
 
+### 6. 初版贴合题目的代码/
+- `3_fix r&p - 2.py`
+  作用：生成 CipherFour 差分 CNF，调用 Cadical，固定轮数、固定活跃 S 盒，自动输出所有差分路径。
+  输出：.cnf文件、求解结果.out、每条差分路径.txt
+- `3_recover_path - 2.py`
+  作用：解析 SAT 求解的原始 solution 文件，把 SAT 求解出来的结果还原差分路径
+  输入：从文件名提取：轮数、活跃S盒数量，把 SAT 输出的变量值还原成每一轮的差分二进制串
+  输出：输出可读的差分路径`path_*.txt`
+- `3_probability.py`
+  作用：根据还原出来的差分路径，自动计算这条路径的差分概率
+  输入：`path_*.txt`（还原好的差分路径）
+  输出：这条路径总概率 = 每个活跃S盒的概率相乘，算差分路径有多大概率能成功
+- `cipherfour_probability.py`
+  作用：自动遍历轮数和概率，找到 CipherFour 每一轮的最小差分概率下界
+  输出：各轮最小概率下界以及运行时间汇总
+
 
 ---
 
@@ -51,6 +67,8 @@
 - 上传文件夹「Cadical SAT求解的示例代码/」
 - 上传文件夹「Cadical SAT代码第一次修改/」
 - 上传压缩包「Accelerating_Automatic_Search-main.zip」
+- 上传文件夹「初版贴合题目的代码/」
+
 
 ### 2026-xx-xx 上传记录
 - 
