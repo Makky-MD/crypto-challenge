@@ -108,7 +108,7 @@ Chat GPT的参考代码/
 - 上传文件夹「Cadical SAT代码第一次修改/」
 - 上传压缩包「Accelerating_Automatic_Search-main.zip」
 - 上传文件夹「初版贴合题目的代码/」
-- 上传文件夹「Chat GPT的参考代码/」
+- 上传文件夹「Chat GPT的参考代码/」(当前 candidates.txt 包含6条有效候选，每条相对误差12.5%，满足题面25%要求。)
 
 ### 2026-xx-xx 上传记录
 - 
