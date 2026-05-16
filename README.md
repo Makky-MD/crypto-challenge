@@ -4,9 +4,9 @@
 
 ---
 
-## 文件夹与文件说明
+## 📁文件夹与文件说明
 
-### 1. saiti3.rar
+### 1. `saiti3.rar`
 - 存放赛题和暴力求解的cpp程序
 
 ### 2. 对S盒的预处理/
@@ -18,11 +18,23 @@
 - `轮加密算法.py`
   作用：实现轻量分组密码的单轮加密流程，包含S盒替换、行移位、列混合操作
 
-### 3. 
+### 3. Cadical SAT求解的示例代码/
+存放Cadical SAT求解的示例代码：
+- `gen csv.py`
+  作用：计算S盒的差分表输出csv文件
+- `pq.csv`
+  作用：由上面的 gen csv.py 生成，为符合logic friday格式要求，需要将m列右移一列，导入logic friday
+- `pq.lfcn`
+  说明：pq.csv导入logic friday后得到合取范式
+- `cnf to sat.py`
+  作用：将合取范式输入到cnf to sat.py，将 Logic Friday 导出的的 CNF 逻辑表达式，转换成 SAT 求解器（Cadical）能识别的数字式CNF子句。
+- `SearchWithCadical.py`
+  作用：调用cadical求解器求解
+
 
 ---
 
-## 更新日志
+## 📝更新日志
 
 ### 2026-05-16 上传记录
 - 上传压缩包「saiti3.rar」
