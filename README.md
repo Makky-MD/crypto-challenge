@@ -20,6 +20,7 @@
 
 ### 3. Cadical SAT求解的示例代码/
 存放Cadical SAT求解的示例代码：
+- cipherfour算法求子句，catical求解
 - `gen csv.py`
   作用：计算S盒的差分表输出csv文件
 - `pq.csv`
