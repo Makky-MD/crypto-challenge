@@ -23,13 +23,16 @@
 - `gen csv.py`
   作用：计算S盒的差分表输出csv文件
 - `pq.csv`
-  作用：由上面的 gen csv.py 生成，为符合logic friday格式要求，需要将m列右移一列，导入logic friday
+  作用：由上面的`gen csv.py`生成，为符合logic friday格式要求，需要将m列右移一列，导入logic friday
 - `pq.lfcn`
-  说明：pq.csv导入logic friday后得到合取范式
+  说明：`pq.csv`导入logic friday后得到合取范式
 - `cnf to sat.py`
-  作用：将合取范式输入到cnf to sat.py，将 Logic Friday 导出的的 CNF 逻辑表达式，转换成 SAT 求解器（Cadical）能识别的数字式CNF子句。
+  作用：将合取范式输入到`cnf to sat.py`，将 Logic Friday 导出的的 CNF 逻辑表达式，转换成 SAT 求解器（Cadical）能识别的数字式CNF子句。
 - `SearchWithCadical.py`
   作用：调用cadical求解器求解
+
+### 4. Cadical SAT代码第一次修改/
+修改S盒为赛题定义的S盒，重复之前流程得到30个子句；`SearchWithCadical.py`文件只保留了算S盒的路径，把P置换和顺序编码约束去掉了
 
 
 ---
@@ -41,6 +44,8 @@
 - 新建文件夹「对S盒的预处理/」
 - 上传3个核心代码文件，完成S盒线性分析相关代码的首次提交
 - 代码功能已通过基础测试，可正常运行
+- 上传文件夹「Cadical SAT求解的示例代码/」
+- 上传文件夹「Cadical SAT代码第一次修改/」
 
 ### 2026-xx-xx 上传记录
 - 
