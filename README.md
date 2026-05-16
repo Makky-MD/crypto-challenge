@@ -34,6 +34,9 @@
 ### 4. Cadical SAT代码第一次修改/
 修改S盒为赛题定义的S盒，重复之前流程得到30个子句；`SearchWithCadical.py`文件只保留了算S盒的路径，把P置换和顺序编码约束去掉了
 
+### 5. `Accelerating_Automatic_Search-main.zip`
+- 一个密码学自动搜索算法的开源项目
+
 
 ---
 
@@ -46,6 +49,7 @@
 - 代码功能已通过基础测试，可正常运行
 - 上传文件夹「Cadical SAT求解的示例代码/」
 - 上传文件夹「Cadical SAT代码第一次修改/」
+- 上传压缩包「Accelerating_Automatic_Search-main.zip」
 
 ### 2026-xx-xx 上传记录
 - 
