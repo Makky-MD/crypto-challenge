@@ -54,6 +54,47 @@
   作用：自动遍历轮数和概率，找到 CipherFour 每一轮的最小差分概率下界
   输出：各轮最小概率下界以及运行时间汇总
 
+### 7. Chat GPT的参考代码/
+```
+Chat GPT的参考代码/
+├── 问题.md                    # 解题规划文档
+└── 赛题三/                    # 第十一届密码数学挑战赛赛题三
+    ├── 2026密码数学挑战赛-赛题三.md  # 赛题描述（PDF转Markdown）
+    ├── 2026密码数学挑战赛-赛题三.pdf # 原始赛题PDF
+    ├── Makefile              # 编译脚本
+    ├── computecor            # 编译后的精确计算可执行文件
+    ├── computecor.cpp        # 官方精确计算代码
+    └── solution/             # 解题代码目录
+        ├── README.md         # 解题代码说明
+        ├── crypto_core.py   # 密码学核心组件
+        ├── beam_topk.py     # Beam Search路线搜索
+        ├── exact_sparse.py  # 稀疏精确传播
+        ├── exact_mitm.py    # MITM精确计算
+        ├── make_candidates.py # 候选生成脚本
+        ├── verify_exact.py  # 官方代码验证接口
+        └── candidates.txt   # 有效候选集合
+```
+| 文件               | 类型     | 用途                                                                 |
+| ------------------ | -------- | -------------------------------------------------------------------- |
+| `README.md`        | 代码说明 | 解题代码的使用说明和示例命令                                         |
+| `crypto_core.py`   | 核心库   | S盒定义、LAT计算、SR/MC线性层掩码传播、贡献值和得分计算               |
+| `beam_topk.py`     | 路线搜索 | Beam Search算法，从输出掩码反向搜索低权重线性路线                    |
+| `exact_sparse.py`  | 精确校验 | 对低活跃掩码完整展开所有非零路线，快速校验Beam估计                   |
+| `exact_mitm.py`    | 精确计算 | Meet-in-the-Middle算法，精确计算固定(r,u,v)的线性壳相关度            |
+| `make_candidates.py`| 批量生成 | 自动生成有效候选集合，输出到 `candidates.txt`                        |
+| `verify_exact.py`  | 结果验证 | 调用官方 `computecor` 程序验证估计值是否满足25%误差条件              |
+| `candidates.txt`   | 候选输出 | 当前已验证的有效候选集合 (6条)                                       |
+```
+1. beam_topk.py      → 搜索候选路线
+       ↓
+2. exact_mitm.py     → 精确计算真实值VT
+       ↓
+3. make_candidates.py → 验证有效性，生成候选集
+       ↓
+4. verify_exact.py   → 调用官方代码最终验证
+       ↓
+5. candidates.txt    → 提交的有效估计值
+```
 
 ---
 
@@ -63,12 +104,11 @@
 - 上传压缩包「saiti3.rar」
 - 新建文件夹「对S盒的预处理/」
 - 上传3个核心代码文件，完成S盒线性分析相关代码的首次提交
-- 代码功能已通过基础测试，可正常运行
 - 上传文件夹「Cadical SAT求解的示例代码/」
 - 上传文件夹「Cadical SAT代码第一次修改/」
 - 上传压缩包「Accelerating_Automatic_Search-main.zip」
 - 上传文件夹「初版贴合题目的代码/」
-
+- 上传文件夹「Chat GPT的参考代码/」
 
 ### 2026-xx-xx 上传记录
 - 
