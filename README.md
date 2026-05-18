@@ -51,8 +51,7 @@
   输入：`path_*.txt`（还原好的差分路径）
   输出：这条路径总概率 = 每个活跃S盒的概率相乘，算差分路径有多大概率能成功
 - `cipherfour_probability.py`
-  作用：自动遍历轮数和概率，找到 CipherFour 每一轮的最小差分概率下界
-  输出：各轮最小概率下界以及运行时间汇总
+  3_probability.py在此程序基础上修改
 
 ### 7. Chat GPT的参考代码/
 ```
@@ -96,6 +95,14 @@ Chat GPT的参考代码/
 5. candidates.txt    → 提交的有效估计值
 ```
 
+### 8. 初版贴合题目的代码第一次修改/
+- `3_fix r&p - 2.py`
+  修改了cadical求解器的调用路径
+- `3_recover_path - 2.py`
+  没有变动
+- `3_probability.py`
+  修改了部分参数
+- `
 ---
 
 ## 📝更新日志
@@ -109,6 +116,7 @@ Chat GPT的参考代码/
 - 上传压缩包「Accelerating_Automatic_Search-main.zip」
 - 上传文件夹「初版贴合题目的代码/」
 - 上传文件夹「Chat GPT的参考代码/」(当前 candidates.txt 包含6条有效候选，每条相对误差12.5%，满足题面25%要求。)
-
+- 上传文件夹「初版贴合题目的代码第一次修改/」
+  
 ### 2026-xx-xx 上传记录
 - 
